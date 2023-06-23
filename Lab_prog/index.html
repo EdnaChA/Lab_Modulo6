@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud para Todos S.A.S</title>
+    <link rel="stylesheet" href="/css/estilos.css" type="text/css"/>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Salud para Todos S.A.S</h1>
+    </header>
+    <h2 id="first_title">
+        Registrate
+    </h2>
+    <section id = "formularios">
+        <div class="form_card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+            </svg>
+            <h2>Formulario Pacientes</h2>
+            <form id = "patientForm">         
+                <label for="nombre">Nombre:</label>
+                <input type="text" name = "nombre" id="patientName"><br>
+        
+                <label for="lastName">Apellido:</label>
+                <input type="text" name = "lastName" id="patientLastName"><br>
+        
+                <label for="cedula">Número de cédula:</label>
+                <input type="number" name = "cedula" id="patientCedula"><br>
+        
+                <label for="edad">Edad:</label>
+                <input type="number" name = "edad" id="patientAge"><br>
+        
+                <label for="telefono">Teléfono de contacto:</label>
+                <input type="number" name="telefono" id="patientPhone"><br>
+                
+                <label for="especialidad">Especialidad requerida:</label>
+                <select name="especialidad" id="patientSpecialty">
+                    <option value="Medicina General">Medicina General</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Medicina Interna">Medicina Interna</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Rehabilitación Física">Rehabilitación física</option>
+                    <option value="Psicología">Psicología</option>
+                    <option value="Odontología">Odontología</option>
+                    <option value="Radiología">Radiología</option>
+                </select><br>
+    
+                <button type="button" id="send_patient">!Enviar!</button> 
+                <button type="reset" id="clear_patient">Borrar</button> 
+            </form>
+        </div>
+        <div class="form_card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+                <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"/>
+            </svg>
+            <h2>Formulario Doctores</h2>
+            <form id = "doctorForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name = "nombre" id="doctorName"><br>
+        
+                <label for="lastName">Apellido:</label>
+                <input type="text" name = "lastName" id="doctorLastName"><br>
+        
+                <label for="cedula">Número de cédula:</label>
+                <input type="number" name = "cedula" id="doctorCedula"><br>
+                
+                <label for="especialidad">Especialidad:</label>
+                <select name="especialidad" id="doctorSpecialty">
+                    <option value="Medicina General">Medicina General</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Medicina Interna">Medicina Interna</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Rehabilitación Física">Rehabilitación física</option>
+                    <option value="Psicología">Psicología</option>
+                    <option value="Odontología">Odontología</option>
+                    <option value="Radiología">Radiología</option>
+                </select><br>
+        
+                <label for="consultorio">Consultorio:</label>
+                <input type="number" name="consultorio" id="doctorOffice"><br>
+                
+                <label for="correo">Correo de contacto:</label>
+                <input type="email" name="correo" id="doctorEmail"><br>
+        
+                <button type="button" id="send_doctor">!Enviar!</button>
+                <button type="reset" id="clear_doctor">Borrar</button>  
+            </form>
+        </div>
+    </section>
+    <section id = "tablas">
+        <h2>Lista de pacientes</h2>
+        <table id="tabla_pacientes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cédula</th>            
+                    <th>Edad</th>
+                    <th>Telefono</th>
+                    <th>Especialidad Requerida</th>
+                </tr>
+            </thead>
+            <tbody id="datos_pacientes">
+            </tbody>
+        </table>
+        <h2>Lista de doctores</h2>
+        <table id="tabla_doctores">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cédula</th>
+                <th>Especialidad</th>
+                <th>Consultorio</th>
+                <th>Correo</th>
+              </tr>
+            </thead>
+            <tbody id="datos_doctores">
+            </tbody>
+        </table> 
+    </section>
+</body>
+<script src="/js/forms.js"></script>
+</html>
